@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Cardiovascular diseases</h2>
+            <h3>AGE</h3>
+            <input id="first" name="AGE" required="required">
+            <h3>GENDER</h3><br><select name="GENDER" id="second" required="required">
+                <option value="MALE">MALE</option>
+                <option value="FEMALE">FEMALE</option>
+            </select>
+            <h3>HEIGHT(cm)</h3><br><input id="third" name="HEIGHT" required="required">
+            <h3>WEIGHT(kg)</h3><input id="fourth" name="WEIGHT" required="required">
+            <h3>SYSTOLIC BLOOD PRESSURE</h3><br><input id="fifth" name="AP_HIGH" required="required">
+            <h3>DIASTOLIC BLOOD PRESSURE</h3><br><input id="sixth" name="AP_LOW" required="required">
+
+            <h3>CHOLESTEROL</h3><br><select id="seventh" name="CHOLESTEROL" required="required">
+                <option value="NORMAL">NORMAL</option>
+                <option value="ABOVE NORMAL">ABOVE NORMAL</option>
+                <option value="WELL ABOVE NORMAL">WELL ABOVE NORMAL</option>
+            </select>
+            <h3>GLUCOSE</h3><br><select id="egith" name="GLUCOSE" required="required">
+                <option value="NORMAL">NORMAL</option>
+                <option value="ABOVE NORMAL">ABOVE NORMAL</option>
+                <option value="WELL ABOVE NORMAL">WELL ABOVE NORMAL</option>
+            </select>
+            <h3>SMOKER</h3><br><select id="ninth" name="SMOKE" required="required">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+            <h3>ALCOHOLIC</h3><br><select id="tenth" name="ALCOHOL" required="required">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+            <h3>PHYSICALLY ACTIVE LIFESTYLE</h3><br><select id="eleventh" name="PHYSICAL_ACTIVITY" required="required">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+
+            <br><br><button id="sub" type="submit ">SUBMIT</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+
+        #fuel:hover {
+            background-color: coral;
+        }
+
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #research:hover {
+            background-color: coral;
+        }
+
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #resea:hover {
+            background-color: coral;
+        }
+
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #sub:hover {
+            background-color: darkcyan;
+        }
+
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fifth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #sixth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #seventh {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #egith {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #ninth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #tenth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #eleventh {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+
+
+    </style>
+</body>
+
+</html>
